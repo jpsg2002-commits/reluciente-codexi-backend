@@ -10,6 +10,11 @@ const db = require('./src/config/db');
 app.use(cors());
 app.use(express.json()); // Permite recibir datos en formato JSON
 
+// Importar rutas de Reluciente Codexi
+const servicioRoutes = require('./src/routes/servicioRoutes');
+
+app.use('/api/servicios', servicioRoutes);
+
 // Ruta de prueba
 app.get('/', (req, res) => {
     res.send('Servidor de Reluciente Codexi funcionando correctamente');
