@@ -12,11 +12,13 @@ app.use(express.json()); // Permite recibir datos en formato JSON
 
 // Importar rutas de Reluciente Codexi
 const servicioRoutes = require('./src/routes/servicioRoutes');
-const colaboradorRoutes = require('./src/routes/colaboradorRoutes'); // NUEVA LÍNEA
+const colaboradorRoutes = require('./src/routes/colaboradorRoutes'); 
+const clienteRoutes = require('./src/routes/clienteRoutes'); // NUEVA
 
+// Usar las rutas
 app.use('/api/servicios', servicioRoutes);
-app.use('/api/colaboradores', colaboradorRoutes); // NUEVA LÍNEA
-
+app.use('/api/colaboradores', colaboradorRoutes); 
+app.use('/api/clientes', clienteRoutes); // NUEVA
 app.use('/api/servicios', servicioRoutes);
 
 // Ruta de prueba
